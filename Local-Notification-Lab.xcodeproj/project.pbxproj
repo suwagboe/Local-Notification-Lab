@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		55860CF023FF141E00829EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55860CEF23FF141E00829EA5 /* AppDelegate.swift */; };
 		55860CF223FF141E00829EA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55860CF123FF141E00829EA5 /* SceneDelegate.swift */; };
-		55860CF423FF141E00829EA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55860CF323FF141E00829EA5 /* ViewController.swift */; };
+		55860CF423FF141E00829EA5 /* theListOfTimersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55860CF323FF141E00829EA5 /* theListOfTimersController.swift */; };
 		55860CF723FF141E00829EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55860CF523FF141E00829EA5 /* Main.storyboard */; };
 		55860CF923FF142000829EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55860CF823FF142000829EA5 /* Assets.xcassets */; };
 		55860CFC23FF142000829EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55860CFA23FF142000829EA5 /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		55860CEC23FF141E00829EA5 /* Local-Notification-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local-Notification-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55860CEF23FF141E00829EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55860CF123FF141E00829EA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55860CF323FF141E00829EA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55860CF323FF141E00829EA5 /* theListOfTimersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theListOfTimersController.swift; sourceTree = "<group>"; };
 		55860CF623FF141E00829EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55860CF823FF142000829EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55860CFB23FF142000829EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				55860CEF23FF141E00829EA5 /* AppDelegate.swift */,
 				55860CF123FF141E00829EA5 /* SceneDelegate.swift */,
-				55860CF323FF141E00829EA5 /* ViewController.swift */,
+				55860CF323FF141E00829EA5 /* theListOfTimersController.swift */,
 				55860CF523FF141E00829EA5 /* Main.storyboard */,
 				55860CF823FF142000829EA5 /* Assets.xcassets */,
 				55860CFA23FF142000829EA5 /* LaunchScreen.storyboard */,
@@ -200,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55860CF423FF141E00829EA5 /* ViewController.swift in Sources */,
+				55860CF423FF141E00829EA5 /* theListOfTimersController.swift in Sources */,
 				55860CF023FF141E00829EA5 /* AppDelegate.swift in Sources */,
 				55860CF223FF141E00829EA5 /* SceneDelegate.swift in Sources */,
 			);

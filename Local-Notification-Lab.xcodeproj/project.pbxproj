@@ -14,6 +14,10 @@
 		55860CF923FF142000829EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55860CF823FF142000829EA5 /* Assets.xcassets */; };
 		55860CFC23FF142000829EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55860CFA23FF142000829EA5 /* LaunchScreen.storyboard */; };
 		55860D0723FF142000829EA5 /* Local_Notification_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55860D0623FF142000829EA5 /* Local_Notification_LabTests.swift */; };
+		55B2A1B123FF213B00EAE31B /* CreatingATimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A1B023FF213B00EAE31B /* CreatingATimerController.swift */; };
+		55B2A1B323FF215E00EAE31B /* TimerDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A1B223FF215E00EAE31B /* TimerDetailController.swift */; };
+		55B2A1B523FF277A00EAE31B /* hourglass timer image.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B2A1B423FF277A00EAE31B /* hourglass timer image.png */; };
+		55B2A1B723FF309300EAE31B /* PendingNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A1B623FF309300EAE31B /* PendingNotifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		55860D0223FF142000829EA5 /* Local-Notification-LabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Local-Notification-LabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55860D0623FF142000829EA5 /* Local_Notification_LabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local_Notification_LabTests.swift; sourceTree = "<group>"; };
 		55860D0823FF142000829EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B2A1B023FF213B00EAE31B /* CreatingATimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingATimerController.swift; sourceTree = "<group>"; };
+		55B2A1B223FF215E00EAE31B /* TimerDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDetailController.swift; sourceTree = "<group>"; };
+		55B2A1B423FF277A00EAE31B /* hourglass timer image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hourglass timer image.png"; path = "../../../../../Downloads/hourglass timer image.png"; sourceTree = "<group>"; };
+		55B2A1B623FF309300EAE31B /* PendingNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingNotifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,10 @@
 			children = (
 				55B2A1AF23FF1EFB00EAE31B /* supporting files */,
 				55860CF323FF141E00829EA5 /* theListOfTimersController.swift */,
+				55B2A1B023FF213B00EAE31B /* CreatingATimerController.swift */,
+				55B2A1B223FF215E00EAE31B /* TimerDetailController.swift */,
+				55B2A1B423FF277A00EAE31B /* hourglass timer image.png */,
+				55B2A1B623FF309300EAE31B /* PendingNotifications.swift */,
 				55860CF523FF141E00829EA5 /* Main.storyboard */,
 				55860CFD23FF142000829EA5 /* Info.plist */,
 			);
@@ -188,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B2A1B523FF277A00EAE31B /* hourglass timer image.png in Resources */,
 				55860CFC23FF142000829EA5 /* LaunchScreen.storyboard in Resources */,
 				55860CF923FF142000829EA5 /* Assets.xcassets in Resources */,
 				55860CF723FF141E00829EA5 /* Main.storyboard in Resources */,
@@ -208,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B2A1B723FF309300EAE31B /* PendingNotifications.swift in Sources */,
+				55B2A1B123FF213B00EAE31B /* CreatingATimerController.swift in Sources */,
 				55860CF423FF141E00829EA5 /* theListOfTimersController.swift in Sources */,
 				55860CF023FF141E00829EA5 /* AppDelegate.swift in Sources */,
+				55B2A1B323FF215E00EAE31B /* TimerDetailController.swift in Sources */,
 				55860CF223FF141E00829EA5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

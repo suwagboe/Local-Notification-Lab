@@ -7,6 +7,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--CreatingA Timer Controller-->
+        <scene sceneID="cGs-4x-pwM">
+            <objects>
+                <viewController id="jxS-2t-4Qy" customClass="CreatingATimerController" customModule="Local_Notification_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A5i-SA-IZt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgA-sg-mjz">
+                                <rect key="frame" x="0.0" y="262" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="timerPickerChanged:" destination="jxS-2t-4Qy" eventType="valueChanged" id="a0W-JW-Zyb"/>
+                                </connections>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GiR-2p-J9d">
+                                <rect key="frame" x="20" y="131" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="zGi-Lp-WiR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="njd-ST-GpJ">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="DcK-Mt-3dQ">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="jxS-2t-4Qy" id="bC9-jp-y7a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="timerPicker" destination="TgA-sg-mjz" id="Xzh-GV-aC1"/>
+                        <outlet property="titleTextField" destination="GiR-2p-J9d" id="M3L-L9-tgD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2d-HP-mmb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="-548"/>
+        </scene>
         <!--The List Of Timers Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -42,6 +83,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="5o6-Dv-fgb" kind="show" id="R8L-HQ-fpp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -55,7 +99,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eVK-Ld-2IN"/>
+                    <navigationItem key="navigationItem" id="eVK-Ld-2IN">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="iNq-8R-7N4">
+                            <connections>
+                                <segue destination="qlC-LV-owi" kind="presentation" id="c2C-Q8-Q64"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="JMk-5i-upV" id="OZP-hr-bnc"/>
                     </connections>
@@ -63,6 +113,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="109.82142857142857"/>
+        </scene>
+        <!--Timer Detail Controller-->
+        <scene sceneID="wrK-vL-p7C">
+            <objects>
+                <viewController id="5o6-Dv-fgb" customClass="TimerDetailController" customModule="Local_Notification_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wEC-Hd-uka">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="BWa-YO-KNj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xVY-KW-xEb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kon-kJ-2zF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rir-2N-C3f">
@@ -82,5 +148,26 @@
             </objects>
             <point key="canvasLocation" x="-26.086956521739133" y="109.82142857142857"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bgs-l7-Kbk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qlC-LV-owi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xGV-Uo-Lp0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jxS-2t-4Qy" kind="relationship" relationship="rootViewController" id="GDL-OJ-N1U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ql-XO-6w3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="-548"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

@@ -19,9 +19,9 @@ class CreatingATimerController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var timerPicker: UIDatePicker!
     
-    private var timeInterval: TimeInterval!
+    private var timeInterval: TimeInterval = Date().timeIntervalSinceNow + 10
     
-    private var delegate: CreatingATimerControllerDelegate?
+     var delegate: CreatingATimerControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,18 +66,17 @@ class CreatingATimerController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        createLocalNotificationForTheTimer() // the order matters.
         delegate?.didTheTimerPickerChange(self)
-        createLocalNotificationForTheTimer()
         dismiss(animated: true)
         
     }
-    
     
     @IBAction func timerPickerChanged(_ sender: UIDatePicker){
   // want a delegate for when it changes because the change effects the other controller
     // this helps signal a change to be watched.
         
-    guard sender.countDownDuration < 0 else { return }
+    guard sender.countDownDuration > 0 else { return }
         timeInterval = sender.countDownDuration
     }
     

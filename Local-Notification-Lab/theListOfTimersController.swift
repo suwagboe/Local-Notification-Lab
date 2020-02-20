@@ -17,7 +17,7 @@ class theListOfTimersController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     
     // the array of timers
-    private var timers = [String](){
+    private var timersList = [String](){
         didSet{
             // reload the table view when the value here gets updated.
         }
@@ -73,7 +73,7 @@ class theListOfTimersController: UIViewController {
 
 extension theListOfTimersController: UITableViewDataSource{
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-          return 10 //
+    return timersList.count
       }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -79,12 +79,9 @@
 		55860CEE23FF141E00829EA5 /* Local-Notification-Lab */ = {
 			isa = PBXGroup;
 			children = (
-				55860CEF23FF141E00829EA5 /* AppDelegate.swift */,
-				55860CF123FF141E00829EA5 /* SceneDelegate.swift */,
+				55B2A1AF23FF1EFB00EAE31B /* supporting files */,
 				55860CF323FF141E00829EA5 /* theListOfTimersController.swift */,
 				55860CF523FF141E00829EA5 /* Main.storyboard */,
-				55860CF823FF142000829EA5 /* Assets.xcassets */,
-				55860CFA23FF142000829EA5 /* LaunchScreen.storyboard */,
 				55860CFD23FF142000829EA5 /* Info.plist */,
 			);
 			path = "Local-Notification-Lab";
@@ -97,6 +94,17 @@
 				55860D0823FF142000829EA5 /* Info.plist */,
 			);
 			path = "Local-Notification-LabTests";
+			sourceTree = "<group>";
+		};
+		55B2A1AF23FF1EFB00EAE31B /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				55860CF123FF141E00829EA5 /* SceneDelegate.swift */,
+				55860CF823FF142000829EA5 /* Assets.xcassets */,
+				55860CFA23FF142000829EA5 /* LaunchScreen.storyboard */,
+				55860CEF23FF141E00829EA5 /* AppDelegate.swift */,
+			);
+			path = "supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

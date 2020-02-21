@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CreatingA Timer Controller-->
+        <!--CreatingATimerController-->
         <scene sceneID="cGs-4x-pwM">
             <objects>
-                <viewController id="jxS-2t-4Qy" customClass="CreatingATimerController" customModule="Local_Notification_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreatingATimerController" title="CreatingATimerController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jxS-2t-4Qy" customClass="CreatingATimerController" customModule="Local_Notification_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A5i-SA-IZt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="5o6-Dv-fgb" kind="show" id="R8L-HQ-fpp"/>
+                                            <segue destination="5o6-Dv-fgb" kind="show" identifier="TimerDetailController" id="R8L-HQ-fpp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,7 +102,7 @@
                     <navigationItem key="navigationItem" id="eVK-Ld-2IN">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="iNq-8R-7N4">
                             <connections>
-                                <segue destination="qlC-LV-owi" kind="presentation" id="c2C-Q8-Q64"/>
+                                <segue destination="qlC-LV-owi" kind="presentation" identifier="CreatingATimerController" id="c2C-Q8-Q64"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -117,18 +117,40 @@
         <!--Timer Detail Controller-->
         <scene sceneID="wrK-vL-p7C">
             <objects>
-                <viewController id="5o6-Dv-fgb" customClass="TimerDetailController" customModule="Local_Notification_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimerDetailController" id="5o6-Dv-fgb" customClass="TimerDetailController" customModule="Local_Notification_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wEC-Hd-uka">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfQ-8i-j4K">
+                                <rect key="frame" x="107" y="229" width="173" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.74509803919999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfs-Nh-tbA">
+                                <rect key="frame" x="107" y="465" width="173" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="BWa-YO-KNj"/>
                     </view>
                     <navigationItem key="navigationItem" id="xVY-KW-xEb"/>
+                    <connections>
+                        <outlet property="practiceLabel" destination="xfs-Nh-tbA" id="zso-FL-wZU"/>
+                        <outlet property="timerLabel" destination="UfQ-8i-j4K" id="L0L-Nr-Zgi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kon-kJ-2zF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="110"/>
+            <point key="canvasLocation" x="1760.8695652173915" y="109.82142857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rir-2N-C3f">

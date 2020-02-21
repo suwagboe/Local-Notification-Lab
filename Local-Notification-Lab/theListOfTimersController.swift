@@ -43,10 +43,27 @@ class theListOfTimersController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // because it is embedded in a nav controller I need to unwrapp it.
-        guard let navController = segue.destination as? UINavigationController, let createTimer = navController.viewControllers.first as? CreatingATimerController else { fatalError("check inside of the prepare for segue function...") }
+        if segue.identifier == "TimerDetailController" {
+        guard let timerDC = segue.destination as? TimerDetailController else { fatalError("check inside of the prepare for segue function...") }
         
-        createTimer.delegate = self 
+        timerDC.blank = "So it is working"
+        } else if segue.identifier == "CreatingATimerController"{
+            guard let navController = segue.destination as? UINavigationController, let createController = navController.viewControllers.first as? CreatingATimerController else {
+                 fatalError("couldnt load create controller")
+        }
+            createController.delegate = self
+        }
     }
+    
+    private lazy var createController: CreatingATimerController = {
+        // getting the instance from storyboard
+        // tells navcontroller get me the first view controller to get the instance
+        guard let createController = storyboard?.instantiateViewController(identifier: "CreatingATimerController") as? CreatingATimerController else {
+            fatalError("couldnt load nav controller")
+        }
+        // set dataPersistence property
+        return createController
+    }()
     
     @objc private func loadNotification(){
         instanceOfPendingNotification.getPendingNotifications { (requests) in
@@ -107,8 +124,31 @@ extension theListOfTimersController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      
+        if editingStyle == .delete {
+            removeTimer(atIndexPath: indexPath)
+        }
         
     }
+    
+    private func removeTimer(atIndexPath indexPath: IndexPath){
+        let timerList = timersList[indexPath.row] // this gives the function a notification
+     
+        let stringIdentifier =  timerList.identifier
+                       
+               // remove notification from UNNNotification Center
+        notificationCenterInstanceSingleton.removePendingNotificationRequests(withIdentifiers: [stringIdentifier])
+               
+               // remove from array of notifications
+               // calling the array and removing it from the notificationS array from above
+               timersList.remove(at: indexPath.row)
+               
+               // remove from tableView
+               tableview.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    
+    
 }
 
 extension theListOfTimersController: UNUserNotificationCenterDelegate{

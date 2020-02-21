@@ -19,6 +19,8 @@ class CreatingATimerController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var timerPicker: UIDatePicker!
     
+    var timerOutPut: TimeInterval = Date().timeIntervalSinceNow + 5
+    
     private var timeInterval: TimeInterval = Date().timeIntervalSinceNow + 10
     
      var delegate: CreatingATimerControllerDelegate?
@@ -69,7 +71,6 @@ class CreatingATimerController: UIViewController {
         createLocalNotificationForTheTimer() // the order matters.
         delegate?.didTheTimerPickerChange(self)
         dismiss(animated: true)
-        
     }
     
     @IBAction func timerPickerChanged(_ sender: UIDatePicker){
@@ -81,3 +82,5 @@ class CreatingATimerController: UIViewController {
     }
     
 }
+
+//extension CreatingATimerController: UIDatePickerData

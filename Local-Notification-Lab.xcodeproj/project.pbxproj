@@ -18,6 +18,7 @@
 		55B2A1B323FF215E00EAE31B /* TimerDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A1B223FF215E00EAE31B /* TimerDetailController.swift */; };
 		55B2A1B523FF277A00EAE31B /* hourglass timer image.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B2A1B423FF277A00EAE31B /* hourglass timer image.png */; };
 		55B2A1B723FF309300EAE31B /* PendingNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A1B623FF309300EAE31B /* PendingNotifications.swift */; };
+		55B2A1B923FF4D7C00EAE31B /* timerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A1B823FF4D7C00EAE31B /* timerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		55B2A1B223FF215E00EAE31B /* TimerDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDetailController.swift; sourceTree = "<group>"; };
 		55B2A1B423FF277A00EAE31B /* hourglass timer image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hourglass timer image.png"; path = "../../../../../Downloads/hourglass timer image.png"; sourceTree = "<group>"; };
 		55B2A1B623FF309300EAE31B /* PendingNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingNotifications.swift; sourceTree = "<group>"; };
+		55B2A1B823FF4D7C00EAE31B /* timerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				55B2A1B623FF309300EAE31B /* PendingNotifications.swift */,
 				55860CF523FF141E00829EA5 /* Main.storyboard */,
 				55860CFD23FF142000829EA5 /* Info.plist */,
+				55B2A1B823FF4D7C00EAE31B /* timerModel.swift */,
 			);
 			path = "Local-Notification-Lab";
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55B2A1B723FF309300EAE31B /* PendingNotifications.swift in Sources */,
+				55B2A1B923FF4D7C00EAE31B /* timerModel.swift in Sources */,
 				55B2A1B123FF213B00EAE31B /* CreatingATimerController.swift in Sources */,
 				55860CF423FF141E00829EA5 /* theListOfTimersController.swift in Sources */,
 				55860CF023FF141E00829EA5 /* AppDelegate.swift in Sources */,
